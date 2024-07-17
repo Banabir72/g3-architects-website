@@ -6,6 +6,9 @@
     font-style: normal;
   }
   /* shared styles */
+  main>section{
+    margin-top: 150px;
+  }
   .display-flex{
     display: flex;
   }
@@ -26,6 +29,10 @@
     font-size: 1.25rem;
     font-weight: 600;
     padding: 20px 25px;
+  }
+  main{
+    max-width: 1440px;
+    margin: 0 auto;
   }
 /* header styles */
 /* navbar styles */
@@ -72,9 +79,72 @@
 }
 .banner-image{
   width: 100%;
+  margin-bottom: 45px;
 }
 
-/* responsive media query */
+/* teams styles */
+.teams{
+  align-items: center;
+  gap: 73px;
+}
+.team-img-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.our-features{
+  max-width: 535px;
+}
+.quick-list, .our, .features{
+  font-size: 2.8rem;
+}
+.quick-list{
+  font-weight: 500;
+}
+.our{
+  font-weight: bold;
+}
+.features{
+  font-weight: bold;
+  color: #FF900E;
+}
+.feature-description{
+  font-size: 1rem;
+}
+.team-img-container>img{
+  width: 100%;
+}
+/* some facts styles */
+.section-title{
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+.section-description{
+  max-width: 542px;
+  font-size: 1rem;
+}
+.facts-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  gap: 124px;
+  padding: 0 50px;
+  margin-top: 100px;
+}
+.facts-items{
+  border: 1px solid #FF900E;
+  text-align: center;
+  padding: 50px 35px;
+}
+.fact-number{
+  font-size: 3.4rem;
+  margin: 0;
+}
+.facts-items>p{
+  margin: 0;
+}
+/* responsive media query for small device */
 @media screen and (max-width: 576px) {
   .navbar, .nav-links{
     flex-direction: column;
@@ -82,4 +152,31 @@
   .nav-links{
     gap: 30px;
   }
+  .teams{
+    display: flex;
+    flex-direction: column;
+  }
+  .team-img-container, .facts-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .our-features{
+    margin-left: 10px;
+  }
+}
+/* responsive media for medium device */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .navbar, .teams{
+      flex-direction: column;
+    }
+    .facts-container{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .section-title, .section-description{
+      text-align: center;
+      width: 100%;
+    }
+    .section-description{
+      margin-left: 80px;
+    }
 }
